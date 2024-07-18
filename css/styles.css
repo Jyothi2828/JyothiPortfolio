@@ -1,0 +1,335 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+a{
+    font-weight: bold;
+}
+
+/* Header styles */
+header {
+    background: #27374D;
+    color: white;
+    padding: 10px 20px; /* Adjusted padding for a more compact header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Hide the header content under the sidebar in mobile view */
+header h1 {
+    margin: 0;
+    font-size: 20px;
+    z-index: 1001; /* Ensure h1 stays above the sidebar */
+}
+
+/* Sidebar (navigation menu) */
+header nav {
+    background: #27374D;
+    color: white;
+    position: fixed;
+    top: 50px; /* Start below the header */
+    left: -300px; /* Hide sidebar off-screen initially */
+    width: 300px; /* Sidebar width */
+    height: calc(100% - 50px); /* Height of the sidebar minus the header height */
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    padding: 10px;
+    z-index: 1000; /* Ensure sidebar is above content */
+}
+
+/* Show sidebar when active */
+header nav.active {
+    left: 0;
+}
+
+/* Sidebar menu items */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    height: 100%; /* Full height */
+    justify-content: flex-start; /* Align items to the top */
+}
+
+header nav ul li {
+    margin: 20px 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #27374D;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+    background: #27374D;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute; /* Fixed within header */
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1001;
+    display: none; /* Hidden by default, shown on mobile */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    header nav {
+        top: 50px; /* Position the sidebar below the header */
+        width: 80vw; /* Sidebar takes up 80% of viewport width */
+        height: calc(100% - 50px); /* Adjust height to fit below the header */
+    }
+
+    header nav ul {
+        padding: 0; /* Remove extra padding on mobile */
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    header h1 {
+        margin-left: 70px; /* Adjust margin for mobile to accommodate menu toggle button */
+    }
+}
+
+/* Responsive styles for tablets and larger devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header nav {
+        display: block; /* Show sidebar on tablets */
+        position: static; /* Reset position */
+        width: auto; /* Reset width */
+        height: auto; /* Reset height */
+        top: auto; /* Reset top position */
+        left: auto; /* Reset left position */
+        margin-right: 20px; /* Space between nav and content */
+    }
+
+    header nav ul {
+        flex-direction: row; /* Align items horizontally */
+        justify-content: flex-start; /* Align items to the left */
+    }
+
+    header nav ul li {
+        margin: 0 15px; /* Space between menu items */
+    }
+
+    header nav ul li a {
+        display: inline-block;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: none; /* Hide hamburger menu on tablets */
+    }
+}
+
+/* Responsive styles for desktop */
+@media (min-width: 1025px) {
+    header nav {
+        display: block; /* Show sidebar on desktop */
+        position: static; /* Reset position */
+        width: auto; /* Reset width */
+        height: auto; /* Reset height */
+        top: auto; /* Reset top position */
+        left: auto; /* Reset left position */
+        margin-right: 20px; /* Space between nav and content */
+    }
+
+    header nav ul {
+        flex-direction: row; /* Align items horizontally */
+        justify-content: flex-start; /* Align items to the left */
+    }
+
+    header nav ul li {
+        margin: 0 15px; /* Space between menu items */
+    }
+
+    header nav ul li a {
+        display: inline-block;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+}
+
+/* Main content styles */
+main {
+    flex: 1;
+    padding: 10px;
+    transition: margin-left 0.3s ease; /* Smooth transition for main content when sidebar is open */
+}
+
+/* Section styles */
+section {
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background: #27374D;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-icons {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex; /* Align list items horizontally */
+    justify-content: center; /* Center the icons horizontally */
+}
+
+.social-icons li {
+    margin: 0 10px; /* Space out the icons */
+}
+
+.social-icons a {
+    font-size: 24px; /* Set icon size */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* LinkedIn color */
+.color-linkedin i {
+    color: #0a66c2;
+}
+
+.color-linkedin a:hover {
+    color: #1d71c5; /* Darker shade on hover */
+    text-shadow: 0 0 8px #1d71c5; /* Glow effect for text */
+}
+
+/* GitHub color */
+.color-github i {
+    color: #060606;
+}
+
+.color-github a:hover {
+    color: #737272; /* Slightly lighter shade on hover */
+    text-shadow: 0 0 8px #626262; /* Glow effect for text */
+}
+
+/* Email color */
+.color-email i {
+    color: #d14836;
+}
+
+.color-email a:hover {
+    color: #d64629; /* Slightly darker shade on hover */
+    text-shadow: 0 0 8px #d64629; /* Glow effect for text */
+}
+
+/* WhatsApp color */
+.color-whatsapp i {
+    color: #25D366;
+}
+
+.color-whatsapp a:hover {
+    color: #1e8a50; /* Slightly darker shade on hover */
+    text-shadow: 0 0 8px #1e8a50; /* Glow effect for text */
+}
+/* Responsive styles for devices with a width of 425px (e.g., small mobile phones) */
+@media (max-width: 425px) {
+    header {
+        padding: 10px 15px; /* Adjust header padding for smaller screens */
+    }
+
+    header nav {
+        top: 50px; /* Start below the header */
+        width: 100vw; /* Full viewport width */
+        height: calc(100% - 50px); /* Full height minus header height */
+        left: -100vw; /* Hide sidebar off-screen initially */
+    }
+
+    header nav.active {
+        left: 0; /* Show sidebar when active */
+    }
+
+    header nav ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    header h1 {
+        margin-left: 50px; /* Adjust margin to accommodate menu toggle button */
+    }
+}
+
+/* Responsive styles for devices with a width of 771px to 425px (e.g., larger mobile phones and tablets) */
+@media (max-width: 771px) and (min-width: 426px) {
+    header {
+        padding: 10px 20px; /* Adjust header padding for medium screens */
+    }
+
+    header nav {
+        top: 50px; /* Start below the header */
+        width: 80vw; /* Sidebar takes up 80% of viewport width */
+        height: calc(100% - 50px); /* Full height minus header height */
+        left: -80vw; /* Hide sidebar off-screen initially */
+    }
+
+    header nav.active {
+        left: 0; /* Show sidebar when active */
+    }
+
+    header nav ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    header h1 {
+        margin-left: 70px; /* Adjust margin to accommodate menu toggle button */
+    }
+}

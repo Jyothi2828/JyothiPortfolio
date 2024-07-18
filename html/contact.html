@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My Portfolio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <header>
+        <button class="menu-toggle">&#9776;</button> <!-- Hamburger Icon -->
+        <nav>
+            <ul>
+                <li><a href="Portfolio.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>          
+            </ul>
+        </nav>
+        <h1>Contact Me</h1>
+    </header>
+    
+    <main>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can reach me through the following channels:</p>
+            <ul>
+                <li><a href="https://wa.me/1234567890" target="_blank" class="color-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                <li><a href="mailto:jpjstest@gmail.com" class="color-email"><i class="fas fa-envelope"></i> Email</a></li>
+                <li><a href="https://linkedin.com/in/jyothiprasannakambam" target="_blank" class="color-linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/Jyothi2828" target="_blank" class="color-github"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+            
+
+            <h3>Fill the deatils below to get in touch :</h3>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="from_name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email_id" value="@gmail.com"required>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4"  required></textarea>
+                <br>
+                <button type="submit">Connect</button>
+            </form>
+            
+        </section>
+    </main>
+    <div id="alert-overlay" class="overlay">
+        <div class="alert-box">
+            <p id="alert-message">Connection sent successfully!</p>
+            <button onclick="hideAlert()">OK</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <ul class="social-icons">
+            <!-- LinkedIn -->
+            <li>
+                <a href="https://linkedin.com/in/jyothiprasannakambam" target="_blank" class="color-linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+    
+            <!-- GitHub -->
+            <li>
+                <a href="https://github.com/Jyothi2828" target="_blank" class="color-github">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+    
+            <!-- Email -->
+            <li>
+                <a href="mailto:jpjstest@gmail.com" class="color-email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+    
+            <!-- WhatsApp -->
+            <li>
+                <a href="https://wa.me/4376020033" target="_blank" class="color-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    </script>
+</body>
+</html>
