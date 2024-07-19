@@ -1,21 +1,3 @@
-/* General Body Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
-
-/* Menu Toggle Button Styles */
-.menu-toggle {
-    display: none; /* Hide menu toggle by default */
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
 .customhr {
     border: 3px;
     height: 10px;
@@ -207,32 +189,8 @@ h4 {
 
 /* Mobile Devices */
 @media (max-width: 480px) {
-    .menu-toggle {
-        display: block; /* Show menu toggle on small screens */
-    }
-
-    nav ul {
-        display: none; /* Hide navigation items by default on small screens */
-        flex-direction: column;
-        position: absolute;
-        background-color: #fff;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    nav ul li {
-        text-align: center;
-        margin: 5px 0;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 10px;
-        color: #333;
-    }
+   
+    
 
     .resume-download {
         flex-direction: column;
@@ -248,32 +206,10 @@ h4 {
 
 /* Small Tablets and Mobile Landscape */
 @media (min-width: 481px) and (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show menu toggle on small tablets */
-    }
+    
 
-    nav ul {
-        display: none; /* Hide navigation items by default on small tablets */
-        flex-direction: column;
-        position: absolute;
-        background-color: #fff;
-        top: 50px;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
+    
 
-    nav ul li {
-        text-align: center;
-        margin: 5px 0;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 10px;
-        color: #333;
-    }
 
     .resume-download {
         flex-direction: row;
