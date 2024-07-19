@@ -10,6 +10,12 @@ body {
 .menu-toggle {
     display: none; /* Hide menu toggle by default */
 }
+.customhr
+    {
+        border: 3px;
+        height: 10px;
+        background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    }
 
 
 h1 {
@@ -100,15 +106,6 @@ h1 {
     font-size: 16px;
 }
 
-.social-links a {
-    text-decoration: none;
-    color: #0078d4;
-    margin: 0 10px;
-}
-
-.social-links a:hover {
-    text-decoration: underline;
-}
 
 h2 {
     font-size: 20px;
@@ -116,14 +113,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.section-header {
-    background-color: #DBE5F1;
-    padding: 10px;
-    font-size: 18px;
-    margin: 20px 0;
-    border-radius: 5px;
-    font-weight: bolder;
-}
+
 
 ul {
     list-style-type: none;
@@ -158,35 +148,6 @@ h4 {
     font-style: italic;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #ccc;
-}
-
-.social-icons {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.social-icons li {
-    margin: 0 10px;
-}
-
-.social-icons a {
-    text-decoration: none;
-    color: #333;
-    font-size: 24px;
-}
-
-.social-icons a:hover {
-    color: #0078d4;
-}
 
 /* Media Queries for Responsiveness */
 
