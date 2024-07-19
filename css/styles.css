@@ -16,7 +16,21 @@ body {
 a{
     font-weight: bold;
 }
+.skills-category1 {
+    display: flex;
+    flex-wrap: nowrap; /* Ensures all items stay in a single line */
+    overflow-x: auto; /* Allows horizontal scrolling on overflow */
+    gap: 20px; /* Adjust gap between cards */
+    align-items: center; /* Center items vertically */
+    padding: 10px 0; /* Add padding as needed */
+}
 
+h1 {
+    margin-right: 10px; /* Adjust spacing between heading and cards */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
 /* Header styles */
 header {
     background: #27374D;

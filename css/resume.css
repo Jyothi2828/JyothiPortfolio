@@ -1,30 +1,48 @@
-/* Container for the Resume Section */
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+.menu-toggle {
+    display: none; /* Hide menu toggle by default */
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Resume Section Styles */
 #resume {
     padding: 20px;
 }
 
 /* Header within the Resume Section */
 .resume-header {
-    display: flex; /* Use flexbox layout */
-    justify-content: space-between; /* Space between h2 and buttons */
-    align-items: center; /* Center-align items vertically */
-    margin-bottom: 20px; /* Space below the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.resume-header h2 {
-    margin: 0; /* Remove default margin */
+.resume-header h1 {
+    margin: 0;
 }
 
-/* Download Buttons Container */
 .resume-download {
-    display: flex; /* Use flexbox layout */
-    gap: 10px; /* Space between buttons */
+    display: flex;
+    gap: 10px;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    color: black;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
@@ -62,17 +80,112 @@
     margin-right: 8px;
 }
 
-/* PDF Viewer */
-.pdf-viewer {
+/* Resume Body Styles */
+#resumebody {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resume-name {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-info, .social-links {
+    margin: 10px 0;
+}
+
+.contact-info {
+    font-size: 16px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #0078d4;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.section-header {
+    background-color: #DBE5F1;
+    padding: 10px;
+    font-size: 18px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.highlight {
+    color: #0078d4;
+    font-weight: bold;
+}
+
+.project-title {
+    font-size: 18px;
     margin-top: 20px;
 }
 
-.pdf-viewer iframe,
-.pdf-viewer embed,
-.pdf-viewer object {
-    border: none;
-    width: 100%;
-    height: 530px; /* Adjust height as needed */
+.project-info {
+    font-size: 16px;
+    color: #555;
+}
+
+.date {
+    font-style: italic;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #0078d4;
 }
 
 /* Media Queries for Responsiveness */
@@ -80,57 +193,26 @@
 /* Mobile Devices */
 @media (max-width: 480px) {
     .resume-download {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center-align buttons */
-        gap: 10px; /* Space between stacked buttons */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .btn {
-        font-size: 14px; /* Smaller font size for mobile */
-        padding: 8px 16px; /* Smaller padding for mobile */
-    }
-
-    .pdf-viewer iframe,
-    .pdf-viewer embed,
-    .pdf-viewer object {
-        height: 400px; /* Adjust height for smaller screens */
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
 
 /* Small Tablets and Mobile Landscape */
 @media (min-width: 481px) and (max-width: 768px) {
     .resume-download {
-        flex-direction: row; /* Keep buttons in a row */
-        justify-content: center; /* Center-align buttons */
+        flex-direction: row;
+        justify-content: center;
     }
 
     .btn {
-        font-size: 15px; /* Adjust font size */
-        padding: 9px 18px; /* Adjust padding */
-    }
-
-    .pdf-viewer iframe,
-    .pdf-viewer embed,
-    .pdf-viewer object {
-        height: 500px; /* Adjust height for tablets */
-    }
-}
-
-/* Laptops and Larger Screens */
-@media (min-width: 769px) {
-    .resume-download {
-        flex-direction: row; /* Keep buttons in a row */
-        justify-content: flex-end; /* Align buttons to the right */
-    }
-
-    .btn {
-        font-size: 16px; /* Default font size */
-        padding: 10px 20px; /* Default padding */
-    }
-
-    .pdf-viewer iframe,
-    .pdf-viewer embed,
-    .pdf-viewer object {
-        height: 530px; /* Default height for larger screens */
+        font-size: 15px;
+        padding: 9px 18px;
     }
 }

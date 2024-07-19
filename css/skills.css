@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Skills Section */
+.resume-content {
+    padding: 0 10px;
+}
+
+.skills-category {
+    margin-bottom: 2rem;
+}
+
+.skills-category h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #27374D;
+    padding-bottom: 0.5rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Uniform card sizes */
+    gap: 1rem;
+    justify-items: center;
+}
+
+.skill-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 100%; /* Ensures the card fills the grid column */
+    max-width: 200px; /* Ensures uniform card width */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.skill-card img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Rating */
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem; /* Space between stars */
+}
+
+.rating .fa-star {
+    color: #d3d3d3; /* Default star color (unselected) */
+}
+
+.rating .fa-star.checked {
+    color: #ffcc00; /* Star color for selected */
+}
+
+/* Hover Effects */
+.skill-card:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for smaller screens */
+    }
+
+    .skill-card img {
+        max-width: 60px;
+    }
+
+    .skill-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .skills-category h2 {
+        font-size: 1rem;
+    }
+
+    .skill-card {
+        padding: 0.5rem;
+    }
+
+    .skill-card img {
+        max-width: 50px;
+    }
+
+    .skill-card p {
+        font-size: 0.8rem;
+    }
+}

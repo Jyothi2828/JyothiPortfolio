@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - My Portfolio</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/resume.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font Awesome for icons -->
 </head>
+
 <body>
     <header>
         <button class="menu-toggle">☰</button>
@@ -20,59 +21,112 @@
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>        
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <h1>My Resume</h1>
     </header>
-    
+
     <main>
         <section id="resume">
             <div class="resume-header">
                 <h1>Resume</h1>
-        
-            <div class="resume-download">
-                
-                <a href="Resume/JyothiPrasanna_Kambam_Resume.docx" download class="btn btn-word">
-                    <i class="fas fa-file-word"></i> Download Word
-                </a>
-                <a href="Resume/JyothiPrasanna_Kambam_Resume.pdf" download class="btn btn-pdf" target="_blank">
-                    <i class="fas fa-file-pdf"></i> Download PDF
-                </a>
+                <div class="resume-download">
+                    <a href="../Resume/JyothiPrasanna_Kambam_Resume.docx" download class="btn btn-word">
+                        <i class="fas fa-file-word"></i> Download Word
+                    </a>
+                    <a href="../Resume/JyothiPrasanna_Kambam_Resume.pdf" download class="btn btn-pdf" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Download PDF
+                    </a>
+                </div>
             </div>
-        </div>
-            <div class="pdf-viewer">
-                <iframe src="Resume/JyothiPrasanna_Kambam_Resume.pdf" width="100%" height="600px" style="border: none;">
-                    <p>Your browser does not support PDFs. <a href="Resume/JyothiPrasanna_Kambam_Resume.pdf">Download the PDF</a>.</p>
-                </iframe>
+
+            <div id="resumebody">
+
+                <h1 class="resume-name">Jyothi Prasanna Kambam</h1>
+
+                <p class="contact-info">
+                    <u>jyothiprasannakambam@gmail.com</u> Toronto, ON M1P2C9 | (437) 602-0033
+                </p>
+                <p class="social-links">
+                    <a href="https://www.linkedin.com/in/jyothiprasannakambam" target="_blank"
+                        class="color-linkedin">LinkedIn</a> |
+                    <a href="https://github.com/Jyothi2828" target="_blank" class="color-github">GitHub</a>
+                </p>
+
+                <h2>Aspiring Software Tester proficient in Selenium WebDriver, Java, and Git, with a strong foundation
+                    in manual and automated testing</h2>
+                <p class="section-header">Summary of Qualifications</p>
+                <ul>
+                    <li>
+                        <h4>Selenium WebDriver, Java, Postman, Git: <span class="highlight">Proficient in using these
+                                tools for both automation and manual testing.</span></h4>
+                    </li>
+                    <li>
+                        <h4>Intermediate Expertise: <span class="highlight">Well-versed in Selenium WebDriver for
+                                automation, Java programming, and version control with Git.</span></h4>
+                    </li>
+                    <li>
+                        <h4>Key Skills: <span class="highlight">Automation Testing, Manual Testing, Postman, Git,
+                                Behavior-driven development, Agile methodology, Cucumber, Maven, Data-driven Testing,
+                                TestNG, MySQL.</span></h4>
+                    </li>
+                </ul>
+
+                <p class="section-header">Education and Training</p>
+                <p>Ontario College Graduate Certificate in Computer Software and DataBase Development. Jan/2024-Present
+                    Loyalist College in Toronto, ON.</p>
+                <p>Bachelor’s Degree in Computer Applications</p>
+                <p>Siddhartha Women’s Degree College affiliated With Osmania University in Telangana India. Jun/2019-
+                    Oct/2022</p>
+                <p>ISTQB Certified Tester Foundation Level 2018 v2 certification with certification number - 00559462
+                </p>
+                <p>Certificate of Training in Java Full Stack Development from Kosmik Technologies, Telangana, India</p>
+
+                <p class="section-header">Projects</p>
+                <p class="project-title">Inventory Management System</p>
+                <p class="project-info">Loyalist College, Toronto, ON <i>Jun</i><span class="date">/2024</span></p>
+                <p>Summary: Developed a Java-based Inventory Management System to manage products, track sales, and
+                    maintain sales history. The system supports adding new products, updating existing product
+                    quantities, processing sales transactions, and displaying detailed inventory and sales records.</p>
+                <p>Technical Skills Used: Java, Exception Handling, Collections Framework Concepts</p>
+
+                <p class="project-title">Airline Reservation System</p>
+                <p class="project-info">Siddhartha Womens Degree College, Telangana, India <span
+                        class="date">Aug/2022</span></p>
+                <p>Summary: Created a Java-based Airline Reservation System to handle flight bookings, cancellations,
+                    and passenger management. The system offers functionalities for adding new flights, booking and
+                    canceling reservations, and displaying passenger details, all with a user-friendly web interface
+                    using HTML.</p>
+                <p>Technical Skills Used: Java, Exception Handling, Collections Framework Concepts.</p>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <p>&copy; 2024 My Portfolio. All rights reserved.</p>
         <ul class="social-icons">
             <!-- LinkedIn -->
             <li>
-                <a href="www.linkedin.com/in/jyothiprasannakambam" target="_blank" class="color-linkedin">
+                <a href="https://www.linkedin.com/in/jyothiprasannakambam" target="_blank" class="color-linkedin">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
-    
+
             <!-- GitHub -->
             <li>
                 <a href="https://github.com/Jyothi2828" target="_blank" class="color-github">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
-    
+
             <!-- Email -->
             <li>
-                <a href="mailto:jpjstest@gmail.com" class="color-email">
+                <a href="mailto:jyothiprasannakambam@gmail.com" class="color-email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </li>
-    
+
             <!-- WhatsApp -->
             <li>
                 <a href="https://wa.me/4376020033" target="_blank" class="color-whatsapp">
@@ -82,6 +136,7 @@
         </ul>
     </footer>
 
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
+
 </html>
