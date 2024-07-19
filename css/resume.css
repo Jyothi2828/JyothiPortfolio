@@ -17,7 +17,49 @@ body {
         background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     }
 
+    .social-links {
+        display: flex; /* Flexbox to arrange buttons horizontally */
+        justify-content: center; /* Center-align the buttons */
+        margin: 20px 0; /* Add vertical spacing */
+    }
 
+    .social-links a {
+        display: flex;
+        align-items: center;
+        margin: 0 10px; /* Horizontal spacing between buttons */
+        padding: 10px 15px;
+        font-size: 18px; /* Size of the icons and text */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        border: 1px solid transparent; /* Border for better click area */
+    }
+
+    .social-links .linkedin {
+        background-color: #0077b5; /* LinkedIn color */
+    }
+
+    .social-links .github {
+        background-color: #333; /* GitHub color */
+    }
+
+    .social-links a:hover {
+        color: #fff;
+        background-color: #444; /* Darker background on hover */
+    }
+
+    .social-links .linkedin:hover {
+        background-color: #005582;
+    }
+
+    .social-links .github:hover {
+        background-color: #000;
+    }
+
+    .social-links i {
+        margin-right: 8px; /* Space between icon and text */
+    }
 h1 {
     margin: 0;
     font-size: 24px;
@@ -34,12 +76,19 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    font-weight: bolder;
 }
 
 .resume-header h1 {
     margin: 0;
 }
-
+p.section-header{
+    background-color: #f0f8ff; /* Light color for highlighting */
+            padding: 10px; /* Add padding for spacing */
+            border-radius: 5px; /* Optional: Rounded corners */
+            margin: 10px 0; /* Optional: Margin for spacing around the paragraph */
+            font-weight: bolder;
+}
 .resume-download {
     display: flex;
     gap: 10px;
@@ -126,7 +175,8 @@ li {
 
 h4 {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
+    font-style: normal;
 }
 
 .highlight {
@@ -177,3 +227,4 @@ h4 {
         padding: 9px 18px;
     }
 }
+
