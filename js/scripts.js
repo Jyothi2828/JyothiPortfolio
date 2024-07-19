@@ -101,3 +101,8 @@ function validateEmail(email) {
     return emailRegex.test(email);
 }
 
+
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        var nav = document.querySelector('nav ul');
+        nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    });

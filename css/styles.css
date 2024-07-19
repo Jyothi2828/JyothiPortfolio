@@ -131,9 +131,7 @@ header nav ul li a:hover {
         padding: 0; /* Remove extra padding on mobile */
     }
 
-    .menu-toggle {
-        display: block; /* Show hamburger icon on mobile */
-    }
+
 
     header h1 {
         margin-left: 70px; /* Adjust margin for mobile to accommodate menu toggle button */
@@ -143,7 +141,6 @@ header nav ul li a:hover {
 /* Responsive styles for tablets and larger devices */
 @media (min-width: 769px) and (max-width: 1024px) {
     header nav {
-        display: block; /* Show sidebar on tablets */
         position: static; /* Reset position */
         width: auto; /* Reset width */
         height: auto; /* Reset height */
@@ -339,10 +336,7 @@ footer p {
         margin: 0;
     }
 
-    .menu-toggle {
-        display: block; /* Show hamburger icon */
-    }
-
+   
     header h1 {
         margin-left: 70px; /* Adjust margin to accommodate menu toggle button */
     }
