@@ -1,122 +1,116 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    min-height: 100vh;
+.skills-tools {
+    padding: 20px;
+    text-align: center;
     display: flex;
-    flex-direction: column;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    flex-wrap: wrap; /* Allows wrapping of cards to the next line */
+    justify-content: center; /* Centers cards horizontally */
+}
+/* Border effect for cards when in view */
+.card.in-view {
+    border: 2px solid #B4CDE6; /* Light Blue border */
+    background-color: #F0F4F8; /* Slightly different background color for better visibility */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for glow effect */
+}
+
+/* Main heading styles */
+h2 {
+    margin: 20px 0 20px 20px; /* Top, Right, Bottom, Left margins */
+    font-size: 2em;
+    transition: color 0.3s; /* Smooth transition for color change */
+    text-align: left; /* Align text to the left */
+    max-width: calc(100% - 40px); /* Ensures space from the left */
+}
+
+/* Card styles */
+.card {
+    flex: 1 1 190px; /* Flex-grow, flex-shrink, and flex-basis for responsive sizing */
+    max-width: 190px; /* Max width to maintain card size */
+    height: auto; /* Adjust height based on content */
+    margin: 10px;
+    background-color: #FFFFFF; /* White color for the card background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    text-align: center; /* Center align text inside the card */
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for glow and color */
+}
+
+/* Hover effect for the card */
+.card:hover {
+    background-color: #B4CDE6; /* Light Blue */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow for glow effect */
+}
+
+/* Heading inside the card */
+h3 {
+    font-size: 1.5em; /* Default font size for headings */
+    margin-bottom: 10px;
+}
+
+/* List styles inside the card */
+ul {
+    list-style-type: none;
     padding: 0;
     margin: 0;
+    font-size: 1.2em; /* Default font size for list items */
 }
 
-h1, h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
+ul li {
+    margin-bottom: 10px; /* Increased margin for better spacing */
 }
 
-/* Skills Section */
-.resume-content {
-    padding: 0 10px;
-}
-
-.skills-category {
-    margin-bottom: 2rem;
-}
-
-.skills-category h2 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    border-bottom: 2px solid #27374D;
-    padding-bottom: 0.5rem;
-}
-
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Uniform card sizes */
-    gap: 1rem;
-    justify-items: center;
-}
-
-.skill-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    width: 100%; /* Ensures the card fills the grid column */
-    max-width: 200px; /* Ensures uniform card width */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-}
-
-.skill-card img {
-    max-width: 80px;
-    height: auto;
-    margin-bottom: 0.5rem;
-}
-
-.skill-card p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-}
-
-/* Rating */
-.rating {
-    display: flex;
-    justify-content: center;
-    gap: 0.2rem; /* Space between stars */
-}
-
-.rating .fa-star {
-    color: #d3d3d3; /* Default star color (unselected) */
-}
-
-.rating .fa-star.checked {
-    color: #ffcc00; /* Star color for selected */
-}
-
-/* Hover Effects */
-.skill-card:hover {
-    background-color: #e0e0e0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for smaller screens */
+/* Responsive Design */
+@media (max-width: 767px) { /* For devices less than tablet size */
+    .card {
+        flex: 1 1 100%; /* Full width minus margins */
+        max-width: 100%; /* Adjust width based on content */
+        height: auto; /* Adjust height based on content */
     }
 
-    .skill-card img {
-        max-width: 60px;
+    /* Add glow effect when card is scrolled into view */
+    .card.in-view {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Glow effect */
+        background-color: #B4CDE6; /* Light Blue */
     }
 
-    .skill-card p {
-        font-size: 0.9rem;
+    /* Ensure the card text is centered and adjust font sizes */
+    h3 {
+        font-size: 1.3em; /* Smaller font size for small devices */
+    }
+
+    ul li {
+        font-size: 1em; /* Smaller font size for small devices */
+        margin-bottom: 8px; /* Adjusted margin for better spacing */
     }
 }
 
-@media (max-width: 425px) {
-    .skills-category h2 {
-        font-size: 1rem;
+@media (min-width: 768px) and (max-width: 991px) { /* For tablets and smaller laptops */
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row */
+        max-width: calc(50% - 20px); /* Adjust width based on content */
+        height: auto; /* Adjust height based on content */
+    }
+}
+
+@media (min-width: 992px) { /* For larger devices */
+    .card {
+        flex: 1 1 calc(25% - 20px); /* Four cards per row */
+        max-width: calc(25% - 20px); /* Adjust width based on content */
+        height: auto; /* Adjust height based on content */
+    }
+}
+
+/* Glow effect when card is scrolled into view on smaller devices */
+@media (max-width: 992px) {
+    .card.in-view {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Glow effect */
+        background-color: #B4CDE6; /* Light Blue */
     }
 
-    .skill-card {
-        padding: 0.5rem;
-    }
-
-    .skill-card img {
-        max-width: 50px;
-    }
-
-    .skill-card p {
-        font-size: 0.8rem;
+    h2 {
+        color: #0274b3; /* Dark Blue for small devices */
     }
 }

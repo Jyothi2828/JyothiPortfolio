@@ -1,3 +1,25 @@
+
+
+:root {
+    --color-primary: #B4CDE6; /* Electric Blue Lemonade */
+    --color-secondary: #0274b3; /* Aquamarine */
+    --color-tertiary: #89ABE3FF; /* Sky Blue */
+    --color-accent: #25D366; /* WhatsApp Green */
+    --color-accent-dark: #1c844d; /* Darker WhatsApp Green on hover */
+    --color-email: #d14836; /* Email Red */
+    --color-email-dark: #a43d28; /* Darker Email Red on hover */
+    --color-github: #24262a; /* GitHub Dark Gray */
+    --color-github-hover: #979797; /* Lighter GitHub Gray on hover */
+    --color-background: #FCF6F5FF; /* White */
+    --color-header-footer: rgb(127, 161, 179); /* Sapphire */
+    --color-text: rgb(0, 0, 0); /* Darker color for text */
+    --color-text-dark: #6E8898FF; /* Light Slate Gray for text shadow on hover */
+    --color-text-light: #d3d0cbff; /* American Silver */
+
+}
+
+
+
 /* General styles */
 * {
     margin: 0;
@@ -13,28 +35,24 @@ body {
     flex-direction: column;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-a{
+
+a {
     font-weight: bold;
 }
-.skills-category1 {
-    display: flex;
-    flex-wrap: nowrap; /* Ensures all items stay in a single line */
-    overflow-x: auto; /* Allows horizontal scrolling on overflow */
-    gap: 20px; /* Adjust gap between cards */
-    align-items: center; /* Center items vertically */
-    padding: 10px 0; /* Add padding as needed */
-}
+
+
 
 h1 {
     margin-right: 10px; /* Adjust spacing between heading and cards */
     font-size: 1.2rem;
     font-weight: bold;
-    color: #ffffff;
+    color: var(--color-text); /* White */
 }
+
 /* Header styles */
 header {
-    background: #27374D;
-    color: white;
+    background: var(--color-primary); /* Dark Blue */
+    color: var(--color-text); /* White */
     padding: 10px 20px; /* Adjusted padding for a more compact header */
     display: flex;
     align-items: center;
@@ -52,8 +70,8 @@ header h1 {
 
 /* Sidebar (navigation menu) */
 header nav {
-    background: #27374D;
-    color: white;
+    background: var(--color-primary); /* Dark Blue */
+    color: var(--color-text); /* White */
     position: fixed;
     top: 50px; /* Start below the header */
     left: -300px; /* Hide sidebar off-screen initially */
@@ -82,11 +100,11 @@ header nav ul {
 }
 
 header nav ul li {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 header nav ul li a {
-    color: white;
+    color: var(--color-text); /* White */
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -96,13 +114,13 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: #27374D;
+    background-color: var(--color-primary); /* Dark Blue */
 }
 
 /* Menu toggle button */
 .menu-toggle {
-    background: #27374D;
-    color: white;
+    background: var(--color-primary); /* Dark Blue */
+    color: var(--color-text); /* White */
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -113,6 +131,101 @@ header nav ul li a:hover {
     transform: translateY(-50%);
     z-index: 1001;
     display: none; /* Hidden by default, shown on mobile */
+}
+/* styles.css */
+
+/* Container for the introduction text */
+.myport {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.myport h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.myport p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+/* Responsive design */
+@media (min-width: 600px) {
+    .myport h1 {
+        font-size: 3rem;
+    }
+    .myport p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .myport h1 {
+        font-size: 3.5rem;
+    }
+    .myport p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .myport h1 {
+        font-size: 3rem;
+    }
+    .myport p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .myport h1 {
+        font-size: 4.5rem;
+    }
+    .myport p {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background: var(--color-primary); /* Sapphire */
+    color: var(--color-text-light); /* American Silver */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+}
+
+footer p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.social-icons {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex; /* Align list items horizontally */
+    justify-content: center; /* Center the icons horizontally */
+}
+
+.social-icons li {
+    margin: 0 10px; /* Space out the icons */
 }
 
 /* Responsive styles for mobile */
@@ -130,8 +243,6 @@ header nav ul li a:hover {
     header nav ul {
         padding: 0; /* Remove extra padding on mobile */
     }
-
-
 
     header h1 {
         margin-left: 70px; /* Adjust margin for mobile to accommodate menu toggle button */
@@ -212,11 +323,10 @@ main {
 section {
     margin-bottom: 20px;
 }
-
 /* Footer Styles */
 footer {
-    background: #27374D;
-    color: white;
+    background: var(--color-primary); /* Electric Blue Lemonade */
+    color: black; /* American Silver */
     text-align: center;
     padding: 10px;
     position: relative;
@@ -241,48 +351,39 @@ footer p {
 .social-icons a {
     font-size: 24px; /* Set icon size */
     text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth color transition */
+    transition: color 0.3s, background-color 0.3s; /* Smooth color transition */
+    padding: 10px; /* Add padding for clickable area */
+    border-radius: 50%; /* Circular icons */
+    display: inline-block; /* Ensure padding is effective */
 }
 
 /* LinkedIn color */
 .color-linkedin i {
-    color: #0a66c2;
+    color: var(--color-secondary); /* Aquamarine */
 }
 
-.color-linkedin a:hover {
-    color: #1d71c5; /* Darker shade on hover */
-    text-shadow: 0 0 8px #1d71c5; /* Glow effect for text */
-}
+
 
 /* GitHub color */
 .color-github i {
-    color: #060606;
+    color: var(--color-github); /* GitHub Dark Gray */
 }
 
-.color-github a:hover {
-    color: #737272; /* Slightly lighter shade on hover */
-    text-shadow: 0 0 8px #626262; /* Glow effect for text */
-}
+
 
 /* Email color */
 .color-email i {
-    color: #d14836;
+    color: var(--color-email); /* Email Red */
 }
 
-.color-email a:hover {
-    color: #d64629; /* Slightly darker shade on hover */
-    text-shadow: 0 0 8px #d64629; /* Glow effect for text */
-}
+
 
 /* WhatsApp color */
 .color-whatsapp i {
-    color: #25D366;
+    color: var(--color-accent); /* WhatsApp Green */
 }
 
-.color-whatsapp a:hover {
-    color: #1e8a50; /* Slightly darker shade on hover */
-    text-shadow: 0 0 8px #1e8a50; /* Glow effect for text */
-}
+
 /* Responsive styles for devices with a width of 425px (e.g., small mobile phones) */
 @media (max-width: 425px) {
     header {
@@ -336,8 +437,31 @@ footer p {
         margin: 0;
     }
 
-   
     header h1 {
         margin-left: 70px; /* Adjust margin to accommodate menu toggle button */
+    }
+}
+/* Responsive styles for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .menu-toggle {
+        display: block; /* Show hamburger menu */
+        position: absolute; /* Ensure it stays in place */
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        font-size: 24px;
+        background: var(--color-primary); /* Match background color */
+        color: var(--color-text); /* Text color */
+        border: none;
+        cursor: pointer;
+        z-index: 1001; /* Ensure it stays above other elements */
+    }
+
+    header nav {
+        display: none; /* Hide the full sidebar */
+    }
+
+    header nav.active {
+        display: block; /* Show sidebar when menu is toggled */
     }
 }

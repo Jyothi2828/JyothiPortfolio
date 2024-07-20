@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.remove('active');
         }
     });
-});
-
 
     // Initialize EmailJS with your public key (User ID)
     emailjs.init("M7YWJm7vYKbHThLzu"); // Replace with your EmailJS public key
@@ -41,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (message.length < 5) {
             showAlert('Message must be at least 5 characters long.');
             return;
-        } 
+        }
 
         // Send form data to EmailJS
         emailjs.sendForm('service_weom7pq', 'template_bbam5q5', form)
@@ -73,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const message = document.getElementById('message').value.trim();
 
                 if (name.length >= 3 && email !== '' && validateEmail(email) && message.length >= 5) {
-                    showAlert("Connection sent succesfully")
+                    showAlert("Connection sent successfully");
                 } else {
                     showAlert('Please complete all fields correctly.');
                 }
@@ -82,24 +80,75 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Function to show the alert message
+    function showAlert(cusmessage) {
+        document.getElementById('alert-message').textContent = cusmessage;
+        document.getElementById('alert-overlay').style.display = 'flex';
+    }
 
-// Function to show the alert message
-function showAlert(cusmessage) {
-    document.getElementById('alert-message').textContent = cusmessage;
-    document.getElementById('alert-overlay').style.display = 'flex';
-}
+    // Function to hide the alert message
+    function hideAlert() {
+        document.getElementById('alert-overlay').style.display = 'none';
+    }
 
-// Function to hide the alert message
-function hideAlert() {
+    // Function to validate email address format
+    function validateEmail(email) {
+        // Simple email regex for validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    const plusButton = document.querySelector('.plus-button');
+    const modal = document.getElementById('contactModal');
+    const modalClose = document.querySelector('.modal-close');
+    const okButton = document.getElementById('okButton');
+
+    plusButton.addEventListener('click', () => {
+        modal.style.display = 'flex';
+    });
+
+    modalClose.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    okButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal if clicking outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+  // Function to hide the alert message
+  function hideAlert() {
     document.getElementById('alert-overlay').style.display = 'none';
 }
 
-// Function to validate email address format
-function validateEmail(email) {
-    // Simple email regex for validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
 
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card');
 
- 
+    function handleScroll() {
+        const windowHeight = window.innerHeight;
+        const windowTop = window.scrollY;
+        
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top + window.scrollY;
+            const cardHeight = card.offsetHeight;
+
+            if (windowTop + windowHeight >= cardTop && windowTop <= cardTop + cardHeight) {
+                card.classList.add('in-view');
+            } else {
+                card.classList.remove('in-view');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll); // Adjust for resizing
+    handleScroll(); // Initial check
+});
+
