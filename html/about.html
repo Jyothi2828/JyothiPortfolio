@@ -6,9 +6,7 @@
     <title>About - My Portfolio</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/about.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
-
 </head>
 <body>
     <header>
@@ -28,15 +26,44 @@
     
     <section class="about-me">
         <div class="main-section">
-          
-                
-                <p>
-                    I am deeply passionate about coding and development, with a particular love for Java. My role as a tester benefits greatly from my understanding of application functionalities, which is enhanced by my gaming experiences. I am dedicated to solving errors and problems, and I constantly seek to improve my skills by learning and creating applications. My laptop is my constant companion in this journey, and I actively explore websites to stay updated with the latest advancements.
-    
-                    In addition to my professional interests, I am also passionate about photography, which allows me to capture and preserve memorable moments. My love for pets brings me joy and inspiration, enriching my life beyond work. I maintain a clear boundary between my professional and personal life, valuing privacy while keeping professional relationships with colleagues and mates.
-                </p>
-              
-           
+            <p id="intro-text">
+                I am deeply passionate about coding and development, with a particular love for Java. My role as a tester benefits greatly from my understanding of application functionalities, which is enhanced by my gaming experiences. I am dedicated to solving errors and problems, and I constantly seek to improve my skills by learning and creating applications. My laptop is my constant companion in this journey, and I actively explore websites to stay updated with the latest advancements.
+            </p>
+            <p id="more-content" style="display: none;">
+                In addition to my professional interests, I am also passionate about photography, which allows me to capture and preserve memorable moments. My love for pets brings me joy and inspiration, enriching my life beyond work. I maintain a clear boundary between my professional and personal life, valuing privacy while keeping professional relationships with colleagues and mates.
+            </p>
+            <a href="#" id="toggle-more" class="read-more-link">Know More</a>
+        </div>
+        
+        <div class="card-container">
+            <div class="card youtube-card">
+                <div class="card-header youtube-header">YouTube</div>
+                <br>
+                <a href="https://www.youtube.com/channel/UClN1EQx1ntnG5Uv3-nnRbMw" target="_blank" class="card-link">
+                    <img id="youtube-profile-pic" src="path-to-youtube-profile-pic" alt="YouTube Profile Picture">
+                    <h2 id="youtube-username">Channel Username</h2>
+                    <p id="youtube-followers">Followers: 0</p>
+                    <p id="youtube-videos">Videos: 0</p>
+                </a>
+            </div>
+            <div class="card instagram-card">
+                <br>
+                <div class="card-header instagram-header">Instagram</div>
+                <a href="https://www.instagram.com/yourusername" target="_blank" class="card-link">
+                    <img src="path-to-instagram-profile-pic" alt="Instagram Profile Picture">
+                    <h2>Instagram</h2>
+                    <p>Click to view my Instagram.</p>
+                </a>
+            </div>
+            <div class="card photo-card">
+                <br>
+                <div class="card-header photo-header">My Personal Work</div>
+                <a href="photos.html" class="card-link">
+                    <img src="path-to-photo-profile-pic" alt="Photo Profile Picture">
+                    <h2>Photos</h2>
+                    <p>Click to view my photos.</p>
+                </a>
+            </div>
         </div>
     </section>
     
@@ -73,9 +100,8 @@
         </ul>
     </footer>
 
- 
-
     <script src="../js/scripts.js"></script>
+    <script src="../js/youtube.js"></script>
+   
 </body>
-
 </html>

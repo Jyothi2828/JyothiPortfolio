@@ -465,3 +465,13 @@ footer p {
         display: block; /* Show sidebar when menu is toggled */
     }
 }
+/* Responsive styles for tablets */
+@media (min-width: 1024px) and (max-width: 1028px) {
+    .menu-toggle {
+        display: none; /* Hide hamburger menu */
+    }
+
+    header nav {
+        display: block; /* Show the full navbar */
+    }
+}

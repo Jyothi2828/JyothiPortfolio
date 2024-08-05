@@ -152,3 +152,17 @@ document.addEventListener('DOMContentLoaded', function() {
     handleScroll(); // Initial check
 });
 
+document.getElementById('toggle-more').addEventListener('click', function(event) {
+    event.preventDefault();
+    var moreContent = document.getElementById('more-content');
+    var introText = document.getElementById('intro-text');
+    var link = document.getElementById('toggle-more');
+
+    if (moreContent.style.display === 'none') {
+        moreContent.style.display = 'block';
+        link.textContent = 'Show Less';
+    } else {
+        moreContent.style.display = 'none';
+        link.textContent = 'Know More';
+    }
+});

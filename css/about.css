@@ -1,97 +1,128 @@
-/* General styles for the body to accommodate fixed footer */
+/* General Styles for the "About Me" Section */
+.about-me {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-section {
+    margin-bottom: 20px;
+}
+
+#intro-text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#more-content {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.read-more-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
+}
+
+/* Styles for Card Container */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* General Card Styles */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 calc(30% - 20px);
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 80px; /* Adjusted size */
+    height: 80px; /* Adjusted size */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover; /* Ensures image fits within the bounds */
+}
+
+.card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+}
+
+.card-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #f5f5f5;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* YouTube Header Styles */
+.youtube-header {
+    background: #FF0000;
+    color: #fff;
+}
+
+/* Instagram Header Styles */
+.instagram-header {
+    background: linear-gradient(90deg, #f9ce34, #ee2a7b, #6228d7);
+    color: #fff;
+}
+
+/* Photo Header Styles */
+.photo-header {
+    background: #cfcfcf;
+    color: #ffffff;
+}
+
+/* Card Link Styles */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
+/* Footer Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
-    margin: 0;
-    padding: 0;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
 }
 
-/* Content section to push footer to the bottom */
-.content {
-    flex: 1; /* Takes up remaining space to push footer to the bottom */
-    display: flex;
-    flex-direction: column;
-}
-
-/* Main section styles */
-.main-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.main-section p {
-    max-width: 800px; /* Adjust as needed */
-    margin: 0 auto;
-    font-size: 1.2em; /* Increase font size for better readability */
-    line-height: 1.6; /* Increase line height for better readability */
-    position: relative; /* For positioning pseudo-elements */
-}
-
-/* About me section styles */
-section.about-me {
-    padding: 40px 20px; /* Adjust top-bottom and left-right padding */
-    position: relative; /* Ensures pseudo-elements are positioned relative to this section */
-    font-family: 'YourFont', sans-serif; /* Replace 'YourFont' with the font used in the section */
-}
-
-/* Styling the quotation marks */
-section.about-me p {
-    position: relative; /* For positioning pseudo-elements */
-    padding: 0 2em; /* Add padding to make space for quotation marks */
-}
-
-section.about-me p::before,
-section.about-me p::after {
-    font-size: 3em; /* Adjust size of quotation marks */
-    color: #B4CDE6; /* Color of quotation marks */
-    position: absolute;
-    top: 0;
-    font-family: 'YourFont', sans-serif; /* Match the font to the text */
-}
-
-section.about-me p::before {
-    content: '“'; /* Opening quotation mark */
-    left: -1em; /* Adjust left position as needed */
-}
-
-section.about-me p::after {
-    content: '”'; /* Closing quotation mark */
-    right: -1em; /* Adjust right position as needed */
-}
-
-/* Footer styles */
 footer {
-    background-color: #B4CDE6; /* Adjust background color as needed */
-    padding: 10px 20px; /* Adjust padding as needed */
+
     text-align: center;
-    border-top: 1px solid #ddd; /* Optional: add a border on top of the footer */
-    margin-top: auto; /* Ensures the footer is pushed to the bottom */
-}
-
-/* Menu toggle button */
-
-/* Hide menu toggle button on devices larger than tablets */
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none; /* Hide menu toggle button on tablets and larger devices */
-    }
-}
-
-/* Show menu toggle button on mobile devices and tablets */
-@media (max-width: 767px) {
-    .menu-toggle {
-        display: block; /* Show menu toggle button on mobile devices */
-        position: absolute; /* Positioning to adjust placement */
-        top: 10px; /* Adjust as needed */
-        right: 10px; /* Adjust as needed */
-        background-color: #f1f1f1; /* Background color of the button */
-        border: none; /* Remove default border */
-        padding: 10px; /* Adjust padding as needed */
-        cursor: pointer; /* Change cursor to pointer */
-        z-index: 1000; /* Ensure it appears above other content */
-    }
+    padding: 10px;
+    margin-top: auto; /* Pushes the footer to the bottom */
 }
