@@ -6,6 +6,29 @@ Overview
 - This project is a personal portfolio website built using HTML, CSS, and JavaScript. 
 - It showcases my skills, experience, and projects, and provides a way for visitors to get in touch with me.
 
+## Screenshots
+
+### Home Page
+![Home Page](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/HomePage.png)
+
+### About Page
+![About Page](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/AboutPage.png)
+
+### Skills Page
+![Skills Page](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/SkillsPage.png)
+
+### Projects Page
+![Projects Page](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/ProjectsPage.png)
+
+### Resume Snapshot 1
+![Resume Snapshot 1](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/ResumeSnapshot1.png)
+
+### Resume Snapshot 2
+![Resume Snapshot 2](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/ResumeSnapShot2.png)
+
+### Contact Page
+![Contact Page](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/ContactPage.png)
+
 Features
 ----------------------------------------------------------------------------------------
 
