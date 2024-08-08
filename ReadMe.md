@@ -29,6 +29,18 @@ Overview
 ### Contact Page
 ![Contact Page](screenshots/ContactPage.png)
 
+### Validating Connection
+This screenshot demonstrates the process of validating a connection within the application.
+![Validating Connection](screenshots/ValidatingConnection1.png)
+
+### Validating Connection Success Alert
+This image shows the success alert that appears when the connection validation is successful.
+![Validating Connection Success Alert](screenshots/ValidatingConnection1SuccessAlert.png)
+
+### Validating Connection in Email
+This screenshot illustrates how the connection validation information is presented in an email.
+![Validating Connection in Email](screenshots/ValidatingConnectionInEmail.png)
+
 Features
 ----------------------------------------------------------------------------------------
 
