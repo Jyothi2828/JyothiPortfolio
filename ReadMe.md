@@ -9,25 +9,25 @@ Overview
 ## Screenshots
 
 ### Home Page
-![Home Page](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/HomePage.png)
+![Home Page](screenshots/HomePage.png)
 
 ### About Page
-![About Page](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/AboutPage.png)
+![About Page](screenshots/AboutPage.png)
 
 ### Skills Page
-![Skills Page](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/SkillsPage.png)
+![Skills Page](screenshots/SkillsPage.png)
 
 ### Projects Page
-![Projects Page](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/ProjectsPage.png)
+![Projects Page](screenshots/ProjectsPage.png)
 
 ### Resume Snapshot 1
-![Resume Snapshot 1](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/ResumeSnapshot1.png)
+![Resume Snapshot 1](screenshots/ResumeSnapshot1.png)
 
 ### Resume Snapshot 2
-![Resume Snapshot 2](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/ResumeSnapShot2.png)
+![Resume Snapshot 2](screenshots/ResumeSnapShot2.png)
 
 ### Contact Page
-![Contact Page](https://github.com/Jyothi2828/my-portfolio/blob/main/screenshots/ContactPage.png)
+![Contact Page](screenshots/ContactPage.png)
 
 Features
 ----------------------------------------------------------------------------------------
