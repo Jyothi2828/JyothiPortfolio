@@ -1,0 +1,94 @@
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+    padding: 20px;
+}
+.btn {
+    background-color: #a6bddb; /* Darker blue color for buttons */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside button */
+    margin: 5px; /* Space around buttons */
+    text-decoration: none; /* Remove underline */
+    display: inline-flex;
+    align-items: center; /* Center icon and text vertically */
+    gap: 8px; /* Space between icon and text */
+    font-size: 1em; /* Font size */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.btn:hover {
+    background-color: #d1e0f0; /* Slightly darker blue on hover */
+}
+
+.btn i {
+    font-size: 1.2em; /* Icon size */
+}
+/* Card Style */
+.card {
+    background-color: #d1e0f0; /* Lighter blue card background color */
+    color: #333; /* Dark text color for better contrast */
+    border: 1px solid #b0c4de; /* Slightly darker blue border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    padding: 20px;
+    width: 300px; /* Card width */
+    height: 400px; /* Increased card height */
+    text-align: center; /* Center align text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effects */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-8px); /* Slightly lift card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow effect */
+}
+
+/* Card Title */
+.card h3 {
+    margin: 0;
+    font-size: 1.5em; /* Larger font size */
+    color: #333; /* Dark text color */
+}
+
+/* Card Description */
+.card p {
+    font-size: 1.1em;
+    color: #555; /* Slightly lighter text color */
+    margin-top: 10px; /* Spacing between title and description */
+}
+
+/* Link Style in Cards */
+.card a {
+    color: #000; /* Black color for links */
+    text-decoration: none; /* Remove underline */
+    display: block;
+    margin-top: 10px;
+}
+
+/* Link Hover Effect */
+.card a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Make cards full width on small screens */
+        max-width: 400px; /* Max width to keep cards reasonably sized */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width on very small screens */
+        max-width: 300px; /* Max width to keep cards reasonably sized */
+    }
+}
